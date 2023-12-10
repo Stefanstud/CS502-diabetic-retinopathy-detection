@@ -11,13 +11,13 @@
 
 ## Models
 - **Overview of Models**: In this project, we have employed various neural network architectures to address the challenge of DR grading. Their implementation can be found below:
-  1. **Simple CNN**: Custom CNN for baseline comparisons. ([View Code](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/simple_cnn.ipynb))
+  1. **Simple CNN**: Custom CNN for baseline comparisons. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/simple_cnn.ipynb))
   2. **EfficientNet**: Pretrained EfficientNet model, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/efficient_net.ipynb))
   3. **Inception v3**: Implementation of Inception v3, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/inception_v3.ipynb))
   4. **ResNet**: Application of ResNet model, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/resnet.ipynb))
   5. **Vision Transformer (ViT)**: Utilizing ViT for image classification, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/vit.ipynb))
-  6. **BiraNet**: Modified BiRA-Net with EfficientNetb3 backbone. Source: ([View Code](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/bira_net.ipynb))
-  7. **Siamese Network**: Combine left and right eye information. ([View Code](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/siamese_net.ipynb))
+  6. **BiraNet**: Modified BiRA-Net with EfficientNetb3 backbone. Source: ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/bira_net.ipynb))
+  7. **Siamese Network**: Combine left and right eye information. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/siamese_net.ipynb))
 - **Visualization**: Heatmaps of our final model for multiple examples of profilerative DR retinas, using Grad-CAM. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/grad-CAM.ipynb))
 ## Usage
 
