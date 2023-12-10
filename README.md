@@ -24,7 +24,7 @@
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Stefanstud/diabetic-retinopathy-detection.git](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection.git
+   git clone https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection.git
    cd CS502-diabetic-retinopathy-detection
 2. Create an environment using Python 3.8.18
    ```bash
