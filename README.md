@@ -5,9 +5,7 @@
 
 ## Data
 - **Data Description**: The dataset utilized for this project is the EyePACS dataset, sourced from the [Diabetic Retinopathy Detection Challenge](https://www.kaggle.com/competitions/diabetic-retinopathy-detection/data) on Kaggle. It consists of 35.126 high resolution retinal images.
-- **Data Preprocessing**: We employed two ways of processing the original images in order to get them in a reasonable size of 512x512.
-  - Resizing and Cropping ([View Code](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/src/preprocessing/preprocessing_1.py))
-  - Trimming and Aspect Ratio Maintenance ([View Code](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/src/preprocessing/preprocessing_2.py))
+- **Data Preprocessing**: We employed [two ways](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/tree/main/src/preprocessing) of processing the original images in order to get them in a reasonable size of 512x512 and crop the retina part of the images.
 
 ## Models
 - **Overview of Models**: In this project, we have employed various neural network architectures to address the challenge of DR grading. Their implementation can be found below:
@@ -83,5 +81,5 @@ For quick reproduction, you may use these pre-trained models. Alternatively, for
 
 We also include checkpoints in the repository intended for those who wish to continue refining and improving the model. These checkpoints serve as a starting point for further training, allowing you to build upon the existing work without starting from the beginning.
 
-Additionally, to generate the best submission file, you can run the `siamese_net.ipynb` notebook provided in this repository, more precisely sections 0, 1, 2 and 4, in this exact order. This notebook is specifically set up to work with the provided model files, which is designed for generating a submission file using our best performing model.
+Additionally, to generate the best submission file, you can run the [`siamese_net.ipynb`](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/siamese_net.ipynb) notebook provided in this repository, more precisely sections 0, 1, 2 and 4, in this exact order. This notebook is specifically set up to work with the provided model files, which is designed for generating a submission file using our best performing model.
 
