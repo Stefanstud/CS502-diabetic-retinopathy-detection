@@ -97,7 +97,7 @@ def load_data(labels_dir, img_dir, img_size, batch_size):
     )
 
     # Transformations for the validation dataset
-    test_transform = transforms.Compose(
+    val_transform = transforms.Compose(
         [
             transforms.Resize(img_size),
             transforms.ToTensor(),
@@ -112,20 +112,20 @@ def load_data(labels_dir, img_dir, img_size, batch_size):
 
     num_samples = len(full_dataset)
     num_train = int(train_size * num_samples)
-    num_test = num_samples - num_train
+    num_val = num_samples - num_train
     print("Number of train samples:" + str(num_train))
-    print("Number of validation samples:" + str(num_test))
+    print("Number of validation samples:" + str(num_val))
 
-    # Data split, train and test
-    train_df, test_df = train_test_split(
+    # Data split, train and validaton
+    train_df, val_df = train_test_split(
         full_dataset, train_size=num_train, shuffle=False
     )
 
     train_dataset = TrainDataset(
         dataframe=train_df, img_dir=img_dir, transform=train_transform
     )
-    test_dataset = TrainDataset(
-        dataframe=test_df, img_dir=img_dir, transform=test_transform
+    val_dataset = TrainDataset(
+        dataframe=val_df, img_dir=img_dir, transform=val_transform
     )
 
     # Calculate sample weights for weighted random sampler
@@ -142,9 +142,9 @@ def load_data(labels_dir, img_dir, img_size, batch_size):
     # sampler = weighted_sampler for undersampling
     train_data_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=False)
 
-    test_data_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+    val_data_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
 
-    return train_data_loader, test_data_loader
+    return train_data_loader, val_data_loader
 
 
 def load_test_data(img_dir, img_size, batch_size):
