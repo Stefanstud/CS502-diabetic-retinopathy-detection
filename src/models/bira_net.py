@@ -32,7 +32,14 @@ class BiraNet(nn.Module):
             nn.Dropout(p=0.3, inplace=True),
             nn.Linear(in_features=1536, out_features=5, bias=True),
         )
-        effNet.load_state_dict(torch.load(MODEL))
+
+        try:
+            model_state_dict = torch.load(
+                MODEL, map_location=lambda storage, loc: storage
+            )
+            effNet.load_state_dict(model_state_dict)
+        except RuntimeError as e:
+            print("Error loading the model:", e)
 
         # freeze
         for param in effNet.parameters():
