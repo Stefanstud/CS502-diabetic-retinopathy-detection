@@ -9,14 +9,14 @@
 
 ## Models
 - **Overview of Models**: In this project, we have employed various neural network architectures to address the challenge of DR grading. Their implementation can be found below:
-  1. **Simple CNN**: Custom CNN for baseline comparisons. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/simple_cnn.ipynb))
-  2. **EfficientNet**: Pretrained EfficientNet model, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/efficient_net.ipynb))
-  3. **Inception v3**: Implementation of Inception v3, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/inception_v3.ipynb))
-  4. **ResNet**: Application of ResNet model, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/resnet.ipynb))
-  5. **Vision Transformer (ViT)**: Utilizing ViT for image classification, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/vit.ipynb))
-  6. **BiraNet**: Modified BiRA-Net with EfficientNetb3 backbone. Source: ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/bira_net.ipynb))
-  7. **Siamese Network**: Combine left and right eye information. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/siamese_net.ipynb))
-- **Visualization**: Heatmaps of our final model for multiple examples of profilerative DR retinas, using Grad-CAM. ([View Notebook](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/grad-CAM.ipynb))
+  1. **Simple CNN**: Custom CNN for baseline comparisons. ([View Notebook](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/simple_cnn.ipynb))
+  2. **EfficientNet**: Pretrained EfficientNet model, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/efficient_net.ipynb))
+  3. **Inception v3**: Implementation of Inception v3, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/inception_v3.ipynb))
+  4. **ResNet**: Application of ResNet model, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/resnet.ipynb))
+  5. **Vision Transformer (ViT)**: Utilizing ViT for image classification, weights from ImageNet. ([View Notebook](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/vit.ipynb))
+  6. **BiraNet**: Modified BiRA-Net with EfficientNetb3 backbone. Source: ([View Notebook](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/bira_net.ipynb))
+  7. **Siamese Network**: Combine left and right eye information. ([View Notebook](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/siamese_net.ipynb))
+- **Visualization**: Heatmaps of our final model for multiple examples of profilerative DR retinas, using Grad-CAM. ([View Notebook](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/grad-CAM.ipynb))
 
 ## Siamese Network
 We propose a Siamese-Like Network for DR grading in order to process and combine information from pairs of images, combining left and right eye information. This method is based on the idea that combining characteristics from both eyes can improve the predictions for DR grading since DR-related alterations frequently occur in both eyes, although with differing degrees. This network has two principal components - the feature extraction branch and the classification head. The feature extraction is conducted using two branches of the best-performing model (EfficientNetB3). These branches are identical in structure but operate independently, processing the left and right eye images separately. The classification head of our network is a custom-designed neural network built on top the feature extraction branches. The Siamese Network is trained to concatenate the features from both eyes using learnable weights. The architecture is shown in the figure below:
@@ -88,5 +88,5 @@ For quick reproduction, you may use these pre-trained models. Alternatively, for
 
 We also include checkpoints in the repository intended for those who wish to continue refining and improving the model. These checkpoints serve as a starting point for further training, allowing you to build upon the existing work without starting from the beginning.
 
-Additionally, to generate the best submission file, you can run the [`siamese_net.ipynb`](https://github.com/Stefanstud/diabetic-retinopathy-detection/blob/main/notebooks/siamese_net.ipynb) notebook provided in this repository, more precisely sections 0, 1, 2 and 4 of this notebook. This notebook is specifically set up to work with the provided model files, which is designed for generating a submission file using our best performing model.
+Additionally, to generate the best submission file, you can run the [`siamese_net.ipynb`](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/siamese_net.ipynb) notebook provided in this repository, more precisely sections 0, 1, 2 and 4 of this notebook. This notebook is specifically set up to work with the provided model files, which is designed for generating a submission file using our best performing model.
 
