@@ -90,5 +90,4 @@ We also include checkpoints in the repository intended for those who wish to con
 
 ### Instructions to run
 
-To generate the **best** submission file, you can run the [`siamese_net.ipynb`](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/siamese_net.ipynb) notebook provided in this repository, more precisely sections 0, 1, 2 and 4 of this notebook. This notebook is specifically set up to work with the provided model files, which is designed for generating a submission file using our best performing model.
-
+To generate the **best** submission file, you can run the [`siamese_net.ipynb`](https://github.com/Stefanstud/CS502-diabetic-retinopathy-detection/blob/main/notebooks/siamese_net.ipynb) notebook provided in this repository, more precisely sections 0, 1, 2 and 4 of this notebook (to use our best performing model without needing to train it again). This notebook is specifically set up to work with the provided model files, which is designed for generating a submission file using our best performing model.
